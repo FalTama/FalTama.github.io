@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAMA Live - Gamer & Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Mencegah scrollbar */
+            color: #333;
+        }
+        header {
+            background: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1; /* Agar konten di atas latar belakang */
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 2rem 0;
+            transition: transform 0.3s;
+            position: relative;
+            border: 5px solid #007bff; /* Bingkai di sekitar gambar dan teks */
+            border-radius: 15px;
+            padding: 20px;
+            background: transparent; /* Menghapus latar belakang */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .profile:hover {
+            transform: scale(1.05);
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            transition: transform 0.3s;
+        }
+        .profile img:hover {
+            transform: rotate(10deg);
+        }
+        .text-background {
+            background: rgba(255, 255, 255, 0.7); /* Latar belakang transparan untuk teks */
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .social {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        .social li {
+            margin: 0 1rem;
+        }
+        .social a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social a:hover {
+            color: #007bff;
+            transform: scale(1.2);
+        }
+        footer {
+            background: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Animasi Latar Belakang */
+        @keyframes moveBackground {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+        .animated-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.pinimg.com/originals/f5/f2/74/f5f27448c036af645c27467c789ad759.gif') no-repeat;
+            background-size: cover;
+            animation: moveBackground 10s linear infinite; /* Ganti dengan durasi yang diinginkan */
+            z-index: 0; /* Agar latar belakang di bawah konten */
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-background"></div> <!-- Latar belakang animasi -->
+    <header>
+        <div class="container">
+            <h1>TAMA Live</h1>
+            <p>Gamer | Workaholics | Developer</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="profile">
+            <img src="https://cdn.discordapp.com/avatars/485088844451151889/4947e4240336498b8fafdf84c2ff4214.webp?size=1024" alt="MJBA Profile Picture">
+            <div class="text-background">
+                <h1>Tama</h1>
+                <p>I'm just a Gamer, Workaholics, and just starting at Devs.</p>
+            </div>
+        </div>
+        <ul class="social">
+            <li><a href="https://discord.gg/dc.gg" target="_blank"><i class="fab fa-discord"></i></a></li>
+            <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Made by Tama</p>
+    </footer>
+
+    <script>
+        // JavaScript untuk efek latar belakang
+        document.body.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            document.body.style.background = `rgb(${Math.floor(x * 255)}, ${Math.floor(y * 255)}, 200)`;
+        });
+    </script>
+</body>
+</html>
