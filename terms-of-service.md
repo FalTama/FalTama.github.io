@@ -1,4 +1,5 @@
-Terms of Service (ToS)
+# Terms of Service (ToS)
+
 Last Updated: 21 January 2025
 Welcome to Utau! By using our bot on Discord, you agree to the following terms and conditions. Please read them carefully. If you do not agree, you may not use the bot.
 
